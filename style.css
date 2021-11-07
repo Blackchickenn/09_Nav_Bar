@@ -2,7 +2,72 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* ===========TYPOGRAPHY============== */
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    color: #143774;
+    font-weight: 400;
+    margin-top: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+}
+span{
+    font-weight: 700;
+    color: #707070;
+}
+a {
+    color: #1792D2;
+}
+a:hover,
+a:focus{
+    color: #143774;
+}
+/* H1 subtitle */
+.sub-title {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0;
+    color: #1792D2;
+    text-transform: uppercase;
+}
+/* H2 title */
+.article-title{
+    font-size: 1.5rem;
+}
+.article-read-more,
+.article-date-com{
+    font-size: 0.875rem;
+}
+.article-read-more{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1792D2;
+    font-weight: bold;
+}
+.article-read-more:hover,
+.article-read-more:focus{
+    color: #143774;;
+    text-decoration: underline;
+}
+
+
+/* ========== LAYOUT ========== */
+
 header{
     width: 95%;
     margin: 0 auto;
@@ -13,37 +78,31 @@ header{
     max-width: 900px;
     margin: 0 auto;
 }
-.container-nav{
+.container-flex{
     display: flex;
     justify-content: space-between;
-}
-h1 {
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 2.1rem;
-    margin-bottom: 0;
-    font-weight: 400;
+    flex-direction: column;
 }
 .tittle{
     padding: 0;
     margin: 0;
     font-weight: bold;
 }
-.sub-title {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 0;
-    color: #1792D2;
-    text-transform: uppercase;
-}
+
+
+
+/* ======= NAVIGATION ========= */
 nav ul{
     display: flex;
     list-style-type: none;
     justify-content: center;
     padding: 0.5em 0;
+    flex-direction: column;
+    text-align: center;
 }
 nav li{
     margin-left: 2em;
+    margin-bottom: 1.5em;
 }
 nav a{
     text-decoration: none;
@@ -56,19 +115,50 @@ nav a:focus{
     color: #1792D2;
     border-bottom: 3px solid #1792D2;
 }
-/* MEDIA QUERY */
-@media (max-width:675px){
-  .container-nav{
-      flex-direction: column;
-  }
-  nav ul{
-      flex-direction: column;
-      padding: 1em 0;
-      text-align: center;
-      margin: 0 auto;
-  } 
-  nav li{
-      margin-bottom: 1.5em;
-  }
+
+/* ARTICLE */
+
+.article-date-com {
+    margin: 2.5em 0;
 }
+.article-main{
+    padding-bottom: 2em;
+    border-bottom: 2px solid #707070;
+    margin-bottom: 2em;
+}
+.article-sub{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+.article-sub-primary{
+    order: 2;
+}
+.article-sub-secondary{
+    order: 1;
+}
+
+
+/* ============= MEDIA QUERY ============= */
+
+@media (min-width:675px){
+    .container-flex{
+        flex-direction: row;
+    }
+    main{
+        width: 75%;
+    }
+    aside{
+        width: 20%;
+    }
+}
+@media (min-width:550px){
+    .article-sub-primary{
+        margin-top: -3em;
+    }
+    .article-date-com{
+        text-align: right;
+    }
+}
+
 
