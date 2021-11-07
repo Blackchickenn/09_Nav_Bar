@@ -4,12 +4,19 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 header{
-
     width: 95%;
     margin: 0 auto;
     background-color: #f8f8f8;
 }
-
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+}
 h1 {
     text-align: center;
     font-family: 'Lora', serif;
@@ -18,7 +25,8 @@ h1 {
     font-weight: 400;
 }
 .tittle{
-    padding-top: 30px;
+    padding: 0;
+    margin: 0;
     font-weight: bold;
 }
 .sub-title {
@@ -32,19 +40,35 @@ nav ul{
     display: flex;
     list-style-type: none;
     justify-content: center;
-    padding: 0.5em 0em 5em 0em;
+    padding: 0.5em 0;
 }
 nav li{
-    margin: 0 1em;
+    margin-left: 2em;
 }
 nav a{
     text-decoration: none;
     color: #707070;
     font-weight: bold;
+    padding: 0.25em 0;
 }
 nav a:hover,
 nav a:focus{
     color: #1792D2;
     border-bottom: 3px solid #1792D2;
+}
+/* MEDIA QUERY */
+@media (max-width:675px){
+  .container-nav{
+      flex-direction: column;
+  }
+  nav ul{
+      flex-direction: column;
+      padding: 1em 0;
+      text-align: center;
+      margin: 0 auto;
+  } 
+  nav li{
+      margin-bottom: 1.5em;
+  }
 }
 
